@@ -83,7 +83,7 @@ def trazar_camino(lab, camino):
     if not camino:
         return
     f, c = camino[0]
-    if lab[f][c] == LIBRE:
+    if lab[f][c] == LIBRE or lab[f][c] == VISITADA:
         lab[f][c] = CAMINO
     trazar_camino(lab,camino[1:])
 
